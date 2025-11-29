@@ -1,0 +1,8 @@
+graph TD
+    User[HR User] -->|Uploads PDFs & Pastes JD| UI[Streamlit UI]
+    UI -->|Extracts Text| PDF[PyPDF Parser]
+    PDF -->|Raw Text| Agent[AI Agent Logic]
+    Agent -->|Sends Prompt| LLM[Google Gemini API]
+    LLM -->|Returns Analysis JSON| Agent
+    Agent -->|Formats Data| UI
+    UI -->|Displays Ranked Table| User
