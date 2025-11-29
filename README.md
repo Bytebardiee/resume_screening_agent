@@ -16,6 +16,18 @@ The **AI Resume Screening Agent** is an intelligent tool designed to streamline 
 - **PDF Processing:** PyPDF
 - **Language:** Python 3.13
 
+## 🏗️ Architecture
+```mermaid
+graph TD
+    User[HR User] -->|Uploads PDFs & Pastes JD| UI[Streamlit UI]
+    UI -->|Extracts Text| PDF[PyPDF Parser]
+    PDF -->|Raw Text| Agent[AI Agent Logic]
+    Agent -->|Sends Prompt| LLM[Google Gemini API]
+    LLM -->|Returns Analysis JSON| Agent
+    Agent -->|Formats Data| UI
+    UI -->|Displays Ranked Table| User
+```
+
 ## ⚙️ Setup & Installation
 
 1.  **Clone the Repository** (or download the source code).
