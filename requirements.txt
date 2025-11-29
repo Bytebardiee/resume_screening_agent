@@ -3,3 +3,4 @@ pypdf
 langchain-google-genai
 python-dotenv
 pandas
+google-generativeai
